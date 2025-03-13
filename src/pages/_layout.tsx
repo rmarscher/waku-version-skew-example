@@ -4,6 +4,7 @@ import type { ReactNode } from 'react';
 
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
+import { CLIENT_BUILD_VERSION } from 'virtual:build-version';
 
 type RootLayoutProps = { children: ReactNode };
 
@@ -19,6 +20,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         {children}
       </main>
       <Footer />
+      <p>Current build version: {CLIENT_BUILD_VERSION}</p>
     </div>
   );
 }
